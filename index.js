@@ -3,12 +3,16 @@ var socket = require('socket.io');
 
 // App setup
 var app = express();
-var server = app.listen(4000, function(){
-    console.log('listening for requests on port 4000,');
+var server = app.listen(2222, function(){
+    console.log('listening for requests on port 2222,');
 });
 
 // Static files
 app.use(express.static('public'));
+
+app.get("/guest/s/:site/", function(req, res) {
+    res.redirect("/?id="+req.query.id+"&ap="+req.query.ap+"&site="+req.params.site);
+});
 
 // Socket setup & pass server
 var io = socket(server);
