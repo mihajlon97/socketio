@@ -1,5 +1,5 @@
 // Make connection
-var socket = io.connect('https://46.101.191.211:2222');
+var socket = io.connect('https://46.101.191.211:2222', {secure: true});
 
 // Query DOM
 var message = document.getElementById('message'),
