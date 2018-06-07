@@ -1,5 +1,5 @@
 // Make connection
-var socket = io.connect('http://t2.werbifi.win');
+var socket = io.connect('http://78.47.113.197:2222');
 
 // Query DOM
 var message = document.getElementById('message'),
