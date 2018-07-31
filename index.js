@@ -4,7 +4,7 @@ var socket = require('socket.io');
 // App setup
 var app = express();
 var server = app.listen(2222, function(){
-    console.log('listening for requests on port 2222,');
+    console.log('listening for requests on port 2222');
 });
 
 // Static files
